@@ -1,7 +1,9 @@
 import React, {} from "react";
 import SearchForm from "./SearchForm";
 import TransactionList from "./TransactionList";
+import AddTransactionForm from "./AddTransactionForm";
 import transactions  from '../db/db'
+
 
 function App() {
   // console.log(transactions.transactions)
@@ -17,7 +19,7 @@ function App() {
             </div>
           </div>
           <div className="form">
-            {/* <AddTransactionForm />  */}
+            <AddTransactionForm /> 
           </div>
         </div>
       </div>
