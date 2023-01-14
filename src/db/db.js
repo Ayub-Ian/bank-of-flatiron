@@ -1,4 +1,4 @@
-{
+const transactions = {
     "transactions": [
       {
         "id": 1,
@@ -102,3 +102,4 @@
    }
    
    
+export default transactions
