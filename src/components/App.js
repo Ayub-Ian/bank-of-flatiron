@@ -13,7 +13,7 @@ function App() {
           <div className="list">
             <div className="l-wrapper">
             <SearchForm />
-            <TransactionList data={transactions.transactions} /> 
+            <TransactionList transactions={transactions.transactions} /> 
             </div>
           </div>
           <div className="form">
