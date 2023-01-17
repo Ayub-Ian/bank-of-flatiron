@@ -7,7 +7,7 @@ import AddTransactionForm from "./AddTransactionForm";
 
 function App() {
 
-  const API = "http://localhost:3000/transactions?q="
+  const API = "http://localhost:8000/transactions?q="
   const [data, setData] = useState([]);
   const [query, setQuery] = useState(" ")
 

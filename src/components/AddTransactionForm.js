@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function AddTransactionForm({ onAddTransaction }) {
-  const API = "http://localhost:3000/transactions"
+  const API = "http://localhost:8000/transactions"
   const [formData, setformData] = useState({
     description: "",
     date: "",
@@ -40,13 +40,14 @@ function AddTransactionForm({ onAddTransaction }) {
   return (
     <div className="add-form">
       <h3>ADD TRANSACTION</h3>
-      <form onSubmit={handleSubmit} autoComplete="off">
+      <form onSubmit={handleSubmit} autoComplete="off" >
         <label>Description</label>
         <input
           type="text"
           placeholder="Purpose of use"
           name="description"
           onChange={handleChange}
+          
         />
         <label>Date</label>
         <input
@@ -54,6 +55,7 @@ function AddTransactionForm({ onAddTransaction }) {
           placeholder="Date of transaction"
           name="date"
           onChange={handleChange}
+         
         />
         <label>Amount</label>
         <input
@@ -61,6 +63,7 @@ function AddTransactionForm({ onAddTransaction }) {
           placeholder="Amount transacted"
           name="amount"
           onChange={handleChange}
+          
         />
         <label>Category</label>
         <input
@@ -68,6 +71,7 @@ function AddTransactionForm({ onAddTransaction }) {
           placeholder="Category of purpose"
           name="category"
           onChange={handleChange}
+          
         />
         <input type="submit" value="Add transaction" />
       </form>

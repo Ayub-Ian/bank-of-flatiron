@@ -251,9 +251,7 @@ code {
 .add-form input:focus, .add-form input:active {
   border-color: var(--blue-200);
 } 
-.add-form input:required{
-  border-color: var(--red-200);
-}
+
 
 .add-form input[type="submit"] {
   background-color: var(--blue-200);
