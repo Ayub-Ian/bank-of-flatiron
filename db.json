@@ -132,13 +132,6 @@
       "category": "Transportation ",
       "amount": "-100",
       "id": 19
-    },
-    {
-      "date": "2023-01-11",
-      "description": "Uber ride",
-      "category": "Transportation ",
-      "amount": "-150",
-      "id": 21
     }
   ]
 }
