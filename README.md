@@ -68,7 +68,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Deployment
 
-Website can be accessed live at [Bank of Flatiron website](https://ayub-ian.github.io/eventlab/)
+Website can be accessed live at [Bank of Flatiron website](https://bank-of-flatiron-eil3kvzdi-ayub-ian.vercel.app/)
 
 ## Built With
 
