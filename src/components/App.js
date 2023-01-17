@@ -1,12 +1,22 @@
-import React, {} from "react";
+import React, { useState, useEffect } from "react";
 import SearchForm from "./SearchForm";
 import TransactionList from "./TransactionList";
 import AddTransactionForm from "./AddTransactionForm";
-import transactions  from '../db/db'
+
 
 
 function App() {
-  // console.log(transactions.transactions)
+
+  const API = "http://localhost:3000/transactions"
+  const [data, setData] = useState([]);
+
+
+  useEffect(() => {
+    fetch(API).then(res => res.json())
+    .then(data => setData(data))
+  }, [])
+  
+
   return (
     <div className="main">
       <div className="container"> 
@@ -15,7 +25,7 @@ function App() {
           <div className="list">
             <div className="l-wrapper">
             <SearchForm />
-            <TransactionList transactions={transactions.transactions} /> 
+            <TransactionList transactions={data} /> 
             </div>
           </div>
           <div className="form">
