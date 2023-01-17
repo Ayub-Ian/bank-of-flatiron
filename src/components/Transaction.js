@@ -2,7 +2,7 @@ import React from 'react'
 
 function Transaction({ transaction, deleteTransaction }) {
     const {id,date, description, category, amount } = transaction
-    const API = "http://localhost:3000/transactions"
+    const API = "https://json-server-bank-flatiron-vercel.vercel.app/transactions"
     
     function handleDelete(id) {
       fetch(`${API}/${id}`, {

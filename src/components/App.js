@@ -7,7 +7,7 @@ import AddTransactionForm from "./AddTransactionForm";
 
 function App() {
 
-  const API = "http://localhost:3000/transactions?q="
+  const API = "https://json-server-bank-flatiron-vercel.vercel.app/transactions?q="
   const [data, setData] = useState([]);
   const [query, setQuery] = useState(" ")
 
