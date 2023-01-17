@@ -1,8 +1,16 @@
 import React from 'react'
 
-function Transaction({ transaction }) {
-    const {date, description, category, amount } = transaction
+function Transaction({ transaction, deleteTransaction }) {
+    const {id,date, description, category, amount } = transaction
+    const API = "http://localhost:3000/transactions"
     
+    function handleDelete(id) {
+      fetch(`${API}/${id}`, {
+        method: "DELETE",
+      })
+
+      deleteTransaction(id)
+    }
     
     
   return (
@@ -19,7 +27,7 @@ function Transaction({ transaction }) {
                 </p>
                 </td>
             <td>
-              <button className="delete">
+              <button className="delete" onClick={() => handleDelete(id)}>
                 <svg
                   width="18"
                   height="18"

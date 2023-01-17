@@ -1,7 +1,7 @@
 import React from "react";
 import Transaction from "./Transaction";
 
-function TransactionList({ transactions }) {
+function TransactionList({ transactions, deleteTransaction }) {
   return (
     <div>
       <table className="ttable" cellSpacing="12px">
@@ -15,7 +15,7 @@ function TransactionList({ transactions }) {
         </thead>
         <tbody>
             {transactions.map(transaction => {
-                return <Transaction key={transaction.id} transaction={transaction}/>
+                return <Transaction key={transaction.id} transaction={transaction} deleteTransaction={deleteTransaction} />
             })}
           
         </tbody>

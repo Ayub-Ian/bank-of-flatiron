@@ -17,26 +17,21 @@ function App() {
     .then(data => setData(data))
   }, [query])
 
-  function onAddData(data) {
-    fetch(API, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        date: data.date,
-        description: data.description,
-        category: data.category,
-        amount: data.amount,
-      }),
-    });
-    alert('Added successfully');
-  }
+  
 
   function onSearch(e) {
     setQuery(e.target.value)
     console.log(e.target.value)
   }
+
+  function onAddTransaction(addedData) {
+    setData([...data, addedData])
+  }
+
+  function deleteTransaction(id) {
+    const updatedTransactions = data.filter(todo => todo.id !== id)
+    setData(updatedTransactions)
+}
 
  
 
@@ -48,11 +43,11 @@ function App() {
           <div className="list">
             <div className="l-wrapper">
             <SearchForm onSearch={onSearch} />
-            <TransactionList transactions={data} /> 
+            <TransactionList transactions={data} deleteTransaction={deleteTransaction} /> 
             </div>
           </div>
           <div className="form">
-            <AddTransactionForm onAddData={onAddData}  /> 
+            <AddTransactionForm onAddTransaction={onAddTransaction}  /> 
           </div>
         </div>
       </div>

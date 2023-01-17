@@ -60,7 +60,7 @@ code {
   padding: 53px 29px;
   min-width: 900px;
   max-width: 110px;
-  height: 100vh;
+  
   
 }
 
@@ -90,6 +90,8 @@ code {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  max-height: 522px;
+  overflow: scroll;
 }
 
 
@@ -100,6 +102,8 @@ code {
   overflow-y: none;
   position: sticky;
   grid-row-start: 1;
+  height: fit-content;
+  padding-bottom: 40px;
   grid-column: 9 / span 4;
 }
 .search{
@@ -242,6 +246,13 @@ code {
   border-color: var(--gray-200);
   background-color: transparent;
   outline: none;
+}
+
+.add-form input:focus, .add-form input:active {
+  border-color: var(--blue-200);
+} 
+.add-form input:required{
+  border-color: var(--red-200);
 }
 
 .add-form input[type="submit"] {
