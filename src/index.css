@@ -41,7 +41,6 @@ code {
 
 
 
-
 .main {
   position: relative;
   overflow-y: scroll;
@@ -257,4 +256,12 @@ code {
 .add-form input[type="submit"]:hover {
   background-color: var(--blue-300);
 
+}
+
+.add-form input[type=date]::placeholder{
+  color: var(--gray-200);
+}
+
+.add-form input[type=date]:invalid::-webkit-datetime-edit {
+  color: var(--gray-200);
 }

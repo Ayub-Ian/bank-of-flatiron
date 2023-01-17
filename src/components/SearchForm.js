@@ -1,14 +1,14 @@
 import React from 'react'
 
-function SearchForm() {
+function SearchForm({ onSearch }) {
   return (
     <div>
-        <form>
+        
             <div className='search'>
-            <input className='' type="text" placeholder="Search transactions" />
+            <input className='' type="text" placeholder="Search transactions" onChange={onSearch} />
             </div>
         
-        </form>
+        
     </div>
   )
 }
