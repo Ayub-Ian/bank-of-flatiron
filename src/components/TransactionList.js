@@ -2,6 +2,10 @@ import React from "react";
 import Transaction from "./Transaction";
 
 function TransactionList({ transactions, deleteTransaction }) {
+
+  const transactionsCopy = [ ...transactions]
+  transactionsCopy.sort((a, b) => (a.id < b.id) ? 1 : -1)
+
   return (
     <div>
       <table className="ttable" cellSpacing="12px">
@@ -14,7 +18,7 @@ function TransactionList({ transactions, deleteTransaction }) {
           </tr>
         </thead>
         <tbody>
-            {transactions.map(transaction => {
+            {transactionsCopy.map(transaction => {
                 return <Transaction key={transaction.id} transaction={transaction} deleteTransaction={deleteTransaction} />
             })}
           

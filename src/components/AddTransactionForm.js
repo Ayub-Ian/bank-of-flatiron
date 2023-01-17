@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function AddTransactionForm({ onAddTransaction }) {
-  const API = "http://localhost:3s000/transactions"
+  const API = "http://localhost:3000/transactions"
   const [formData, setformData] = useState({
     description: "",
     date: "",
